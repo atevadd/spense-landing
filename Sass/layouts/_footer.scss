@@ -1,0 +1,97 @@
+.footer {
+  background-color: $primary-color;
+  color: $text-color-white;
+  padding: 60px;
+  font-family: inherit;
+
+  @include mb {
+    padding: 30px 0;
+
+    .row {
+      flex-direction: column;
+      width: 90%;
+    }
+  }
+
+  &__brand {
+    width: 35%;
+    // border: 1px solid red;
+    align-self: flex-start;
+
+    @include mb {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      font-weight: 700;
+      color: inherit;
+      margin-bottom: 10px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: $text-color-accent;
+      line-height: 1.6;
+
+      @include mb {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  &__map-links {
+    align-self: flex-start;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include mb {
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 10px;
+    }
+
+    .column {
+      display: block;
+
+      @include mb {
+        &.site {
+          grid-row: 2/3;
+          grid-column: 1/2;
+        }
+        &.comp {
+          grid-row: 1/2;
+          grid-column: 1/2;
+        }
+        &.opp {
+          grid-row: 1/2;
+          grid-column: 2/3;
+        }
+      }
+
+      h5 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: inherit;
+        margin-bottom: 10px;
+
+        @include mb {
+          font-size: 0.9rem;
+        }
+      }
+      a {
+        display: block;
+        margin-bottom: 10px;
+        color: $text-color-accent;
+
+        @include mb {
+          font-size: 0.75rem;
+        }
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

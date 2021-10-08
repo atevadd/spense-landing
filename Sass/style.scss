@@ -1,0 +1,96 @@
+$primary-color: #000000;
+$text-color-white: #ffffff;
+$text-color-black: #292929;
+$text-color-accent: #5a5444;
+$section-bg-color: #f0eeeb;
+$border-color: #b2b2b1;
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+
+// media query for mobile
+@mixin mb {
+  @media screen and (max-width: 599px) {
+    @content;
+  }
+}
+
+// media query for tablet
+@mixin tb {
+  @media screen and (min-width: 600px) and (max-width: 900px) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: #fff;
+  font-family: "Cabin", sans-serif;
+  overflow-x: hidden;
+}
+
+.row {
+  width: 80%;
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mb {
+    width: 90%;
+    max-width: 90%;
+  }
+  @include tb {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+
+/*----------------- Utility classes --------------*/
+.flex {
+  display: flex;
+}
+.center-align {
+  align-items: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-evenly {
+  justify-content: space-evenly;
+}
+.space-around {
+  justify-content: space-around;
+}
+a {
+  text-decoration: none;
+}
+
+.promo__text {
+  width: 100%;
+  background-color: $primary-color;
+  padding: 7px;
+  text-align: center;
+
+  p {
+    color: $text-color-white;
+    font-size: 0.8rem;
+
+    .underline {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+// Different sections of the landing page
+@import 'layouts/header';
+@import 'layouts/hero';
+@import 'layouts/companies';
+@import 'layouts/escrow';
+@import 'layouts/feature';
+@import 'layouts/footer';

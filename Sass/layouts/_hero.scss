@@ -1,0 +1,151 @@
+.hero {
+  width: 100%;
+  height: 100%;
+  // border: 1px solid red;
+  background-color: $section-bg-color;
+  padding-bottom: 50px;
+
+  @include mb {
+    .row {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    width: 50%;
+    height: 100%;
+
+    @include mb {
+      width: 100%;
+      // border: 1px solid red;
+      order: 2;
+    }
+
+    &-headline {
+      font-size: 3rem;
+      color: $text-color-black;
+      margin-bottom: 5px;
+
+      @include mb {
+        font-size: 1.7rem;
+        font-weight: 600;
+        margin-top: 15px;
+      }
+    }
+    &-subtitle {
+      color: $text-color-accent;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    @include mb{
+      font-size: .85rem;
+    }
+    
+    &-benefits {
+      list-style-type: none;
+
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: $text-color-accent;
+
+        @include mb {
+          font-size: 0.88rem;
+        }
+
+        img {
+          margin-right: 10px;
+
+          @include mb {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+    &-form {
+      width: 65%;
+      margin-top: 20px;
+      // display: flex;
+      // align-items: center;
+      // justify-content: space-between;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      column-gap: 15px;
+      // border: 1px solid;
+
+      @include mb {
+        width: 100%;
+        grid-template-columns: 55% 38%;
+        column-gap: 10px;
+      }
+
+      input {
+        height: 45px;
+        padding: 0 20px;
+        text-align: center;
+        font-family: inherit;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+
+        @include mb {
+          width: 100%;
+        }
+      }
+      button {
+        padding: 14px 20px;
+        background-color: $primary-color;
+        color: $text-color-white;
+        font-weight: 500;
+        border: none;
+        border-radius: 5px;
+        font-family: inherit;
+        cursor: pointer;
+        transition: 0.2s ease;
+        outline: 1px solid $primary-color;
+
+        @include mb {
+          font-size: .8rem;
+          padding: 14px 0;
+        }
+
+        &:hover {
+          outline: 1px solid $primary-color;
+          outline-offset: 2px;
+        }
+      }
+    }
+  }
+
+  &__image {
+    width: 40%;
+    height: 70vh;
+    // border: 1px solid red;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+
+    @include mb {
+      order: 1;
+      width: 100%;
+      height: 50vh;
+    }
+
+    img,
+    picture {
+      width: 100%;
+      height: 100%;
+      // object-fit: cover;
+      // object-position: center;
+      border-radius: 10px;
+
+      @include mb {
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 16/8;
+      }
+    }
+  }
+}

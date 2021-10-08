@@ -1,0 +1,88 @@
+.escrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  height: 50vh;
+  margin: 0 auto 20px;
+  background-color: $section-bg-color;
+  border-radius: 10px;
+
+  @include mb {
+    width: 90%;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  &__text {
+    display: block;
+    padding-right: 25px;
+    // border: 1px solid;
+    width: 40%;
+
+    @include mb {
+      width: 100%;
+      padding: 25px;
+    }
+
+    &-headline {
+      font-size: 2.1rem;
+      color: $primary-color;
+      margin-bottom: 10px;
+      font-weight: 700;
+      line-height: 1.2;
+
+      @include mb {
+        font-size: 1.8rem;
+      }
+    }
+    &-subtitle {
+      color: $text-color-accent;
+      font-size: 0.98rem;
+      margin-bottom: 15px;
+      line-height: 1.6;
+
+      @include mb {
+        font-size: 0.88rem;
+      }
+    }
+    &-link {
+      color: $text-color-accent;
+      text-decoration: underline;
+      font-size: 1rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+  &__image {
+    position: relative;
+    // border: 1px solid;
+    width: 40%;
+    align-self: stretch;
+    // overflow: hidden;
+
+    @include mb {
+      width: 100%;
+      height: 200px;
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include mb {
+        height: 200px;
+        position: relative;
+        object-fit: cover;
+        object-position: 50%;
+      }
+    }
+  }
+}

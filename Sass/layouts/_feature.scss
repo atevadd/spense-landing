@@ -1,0 +1,83 @@
+.feature {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 60vh;
+
+  @include mb {
+    width: 90%;
+    margin: 20px auto;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  &__image {
+    width: 50%;
+    align-self: stretch;
+    // border: 1px solid red;
+
+    @include mb {
+      width: 100%;
+      order: 2;
+      margin-top: 15px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: right;
+      // border: 1px solid;
+
+      @include mb {
+        object-position: left;
+        object-fit: cover;
+      }
+    }
+  }
+  &__text {
+    width: 33%;
+    // border: 1px solid red;
+    justify-self: center;
+
+    @include mb {
+      width: 100%;
+    }
+
+    h3 {
+      font-size: 2rem;
+      color: $primary-color;
+      line-height: 1.5;
+
+      @include mb{
+        font-size: 1.6rem;
+      }
+    }
+    p {
+      margin: 5px 0 20px;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: $text-color-accent;
+      font-weight: 400;
+
+      @include mb {
+        font-size: .88rem;
+      }
+    }
+    &-link {
+      color: $text-color-accent;
+      text-decoration: underline;
+      font-size: 1rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+
+      i {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
